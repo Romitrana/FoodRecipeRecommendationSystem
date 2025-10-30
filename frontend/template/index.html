@@ -3,36 +3,59 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../static/style.css" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
     <title>Cook&Bite | cook it, taste it</title>
   </head>
+
   <body>
     <!-- Input field in center -->
     <div class="search-container">
-      <input type="text" class="search-box" placeholder="Enter ingredient..." />
+      <input
+        type="text"
+        class="search-box"
+        placeholder="Enter ingredient..."
+      />
       <button class="search-button">Search</button>
     </div>
-
+  <!-- recipes list grid goes here -->
     <div class="recipes">
-      <p>Recipes coming soon...</p>
     </div>
 
     <!-- Floating food icons -->
     <div class="meal" style="top: 10%; left: 15%; animation-duration: 20s">
-      <img src="../images/pizzaslice.png" alt="pizzaslice" />
+      <img
+        src="{{ url_for('static', filename='images/pizzaslice.png') }}"
+        alt="pizzaslice"
+      />
     </div>
     <div class="meal" style="top: 20%; left: 70%; animation-duration: 18s">
-      <img src="../images/burger.png" alt="Burger" />
+      <img
+        src="{{ url_for('static', filename='images/burger.png') }}"
+        alt="burger"
+      />
     </div>
     <div class="meal" style="top: 60%; left: 10%; animation-duration: 25s">
-      <img src="../images/dosa.png" alt="dosa" />
+      <img
+        src="{{ url_for('static', filename='images/dosa.png') }}"
+        alt="dosa"
+      />
     </div>
     <div class="meal" style="top: 70%; right: 10%; animation-duration: 22s">
-      <img src="../images/fries.png" alt="fries" />
+      <img
+        src="{{ url_for('static', filename='images/fries.png') }}"
+        alt="fries"
+      />
     </div>
     <div class="meal" style="bottom: 5%; left: 45%; animation-duration: 30s">
-      <img src="../images/soup.webp" alt="soup" />
+      <img
+        src="{{ url_for('static', filename='images/soup.webp') }}"
+        alt="soup"
+      />
     </div>
-    <script src="../static/index.js"></script>
+
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
   </body>
 </html>

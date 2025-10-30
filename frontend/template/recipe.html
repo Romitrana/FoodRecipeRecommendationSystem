@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+    <title>{{ recipe.name }} | Cook&Bite</title>
+  </head>
+
+  <body>
+    <div class="recipe-detail-container">
+      <h1>{{ recipe.name }}</h1>
+      <h3>Ingredients:</h3>
+      <p>{{ recipe.ingredients_name }}</p>
+
+      <h3>Instructions:</h3>
+      <p>{{ recipe.instructions }}</p>
+
+      <button onclick="window.location.href='/'" class="back-button">
+        ⬅ Back to Home
+      </button>
+    </div>
+  </body>
+</html>
